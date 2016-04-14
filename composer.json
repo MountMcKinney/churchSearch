@@ -1,0 +1,13 @@
+{
+    "name": "root/workspace",
+    "authors": [
+        {
+            "name": "John McKinney",
+            "email": "john@mountmckinney.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.18",
+        "codeigniter/framework": "^3.0.5"
+    }
+}
