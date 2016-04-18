@@ -1,21 +1,8 @@
 RewriteEngine On
-RewriteRule ^campfirestories.php$ /campfirestories/
-RewriteRule ^twocents.php$ /twocents/
-RewriteRule ^subscribe.php$ /subscribe/
-RewriteRule ^contact.php$ /contact/
-RewriteRule ^portfolio.php$ /portfolio/
-RewriteRule ^services.php$ /services/
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
 
 php_flag  display_errors        on
 php_value error_reporting       2039
-
-
-# Some hosts may require you to use the `RewriteBase` directive.
-# If you need to use the `RewriteBase` directive, it should be the
-# absolute physical path to the directory that contains this htaccess file.
-#
-# RewriteBase /
-
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteRule ^ index.php [QSA,L]

@@ -1,37 +1,37 @@
 <?php
-class News extends CI_Controller {
+class Church extends CI_Controller {
 
         public function __construct()
         {
                 parent::__construct();
-                $this->load->model('news_model');
+                $this->load->model('church_model');
                 $this->load->helper('url_helper');
         }
 
         public function index()
         {
-                $data['news'] = $this->news_model->get_news();
-                $data['title'] = 'News archive';
+                $data['church'] = $this->church_model->get_church();
+                $data['title'] = 'church archive';
 
                 $this->load->view('templates/header', $data);
-                $this->load->view('news/index', $data);
+                $this->load->view('church/index', $data);
                 $this->load->view('templates/footer');
         }
 
 
         public function view($slug = NULL)
         {
-                $data['news_item'] = $this->news_model->get_news($slug);
-
-                if (empty($data['news_item']))
+                $data['church_item'] = $this->church_model->get_church($slug);
+                
+                if (empty($data['church_item']))
                 {
                         show_404();
                 }
 
-                $data['title'] = $data['news_item']['title'];
+                $data['title'] = $data['church_item']['title'];
 
                 $this->load->view('templates/header', $data);
-                $this->load->view('news/view', $data);
+                $this->load->view('church/view', $data);
                 $this->load->view('templates/footer');
         }
 
@@ -40,7 +40,7 @@ class News extends CI_Controller {
             $this->load->helper('form');
             $this->load->library('form_validation');
 
-            $data['title'] = 'Create a news item';
+            $data['title'] = 'Create a church item';
 
             $this->form_validation->set_rules('title', 'Title', 'required');
             $this->form_validation->set_rules('text', 'Text', 'required');
@@ -48,14 +48,14 @@ class News extends CI_Controller {
             if ($this->form_validation->run() === FALSE)
             {
                 $this->load->view('templates/header', $data);
-                $this->load->view('news/create');
+                $this->load->view('church/create');
                 $this->load->view('templates/footer');
 
             }
             else
             {
-                $this->news_model->set_news();
-                $this->load->view('news/success');
+                $this->church_model->set_church();
+                $this->load->view('church/success');
             }
         }
 }
