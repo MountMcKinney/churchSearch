@@ -22,7 +22,7 @@ class Church extends CI_Controller {
         public function view($slug = NULL)
         {
                 $data['church_item'] = $this->church_model->get_church($slug);
-                
+
                 if (empty($data['church_item']))
                 {
                         show_404();

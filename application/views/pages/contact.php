@@ -17,13 +17,13 @@
   </div>
   <form class="contactForm" action="#" method="post">
     <label for="contactName">Name:</label>
-      <input type="text" name="contactName" placeholder="John or John Smith" required>
+      <input type="text" name="contactName" id="contactName" placeholder="e.g. John" required>
     <br>
     <label for="contactEmail">Email:</label>
-      <input type="email" name="contactEmail" placeholder="johnsmith@gmail.com" required>
+      <input type="email" name="contactEmail" id="contactEmail" placeholder="e.g. johnsmith@gmail.com" required>
     <br>
     <label for="contactComments">Comments:</label>
-      <textarea rows="4" cols="50" name="contactComments" placeholder="Your comments go here" required></textarea>
+      <textarea rows="4" cols="20" name="contactComments" id="contactComments" placeholder="Your comments go here" required></textarea>
     <br>
     <button type="submit" name="loginButton">Log In</button>
   </form>

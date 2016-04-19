@@ -11,7 +11,7 @@
         <body>
           <div class="head">
             <div class="logo">
-              <a href="#"><h1>Church <span class="logoColor">Search</span></h1>
+              <a href="/"><h1>Church <span class="logoColor">Search</span></h1>
               <h4>Find a Match Made in Heaven</h4></a>
             </div>
             <div id="menubar">
@@ -27,22 +27,27 @@
           <div class="mobileMenu">
           	<h3>Menu <a href="#" class="mobileMenuToggle menuBtn">×</a></h3>
             	<ul>
+                <div class="menuPic">
+                  <a href="/index.php/profile/"><li>
+                    <img src="/img/profileExample.jpg" alt="Your profile picture" />
+                  </li></a>
+                </div>
                 <!-- Put the Profile image below menu but before home (circle picture). Clickable to profile -->
                 <!-- Symbols for each menu item -->
                 <!--
                 home = house
                 search = magnifying glass
-                profile =
-                sign up =
-                about =
-                contact =
+                profile = person
+                sign-up = paper with a pen
+                about = person talking?
+                contact = mini-form?
                 -->
-                  <a href="#"><li>Home</li></a>
-                  <a href="#"><li>Search</li></a>
-                  <a href="#"><li>Profile</li></a>
-                  <a href="#"><li>Sign-Up</li></a>
-                  <a href="#"><li>About</li></a>
-                  <a href="#"><li>Contact</li></a>
+                  <a href="/"><li>Home</li></a>
+                  <a href="/index.php/search/"><li>Search</li></a>
+                  <a href="/index.php/profile/"><li>Profile</li></a>
+                  <a href="/index.php/sign-up/"><li>Sign-Up</li></a>
+                  <a href="/index.php/pages/view/about"><li>About</li></a>
+                  <a href="/index.php/pages/view/contact"><li>Contact</li></a>
                 </ul>
             </div>
 

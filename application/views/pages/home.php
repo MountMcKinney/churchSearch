@@ -10,10 +10,10 @@
   </p>
   <form class="loginForm" action="#" method="post">
     <label for="username">Username:</label>
-      <input type="text" name="username" required>
+      <input type="text" name="username" id="loginUsername" required>
     <br>
     <label for="psw">Password:</label>
-      <input type="password" name="psw" required>
+      <input type="password" name="psw" id="loginPsw" required>
     <br>
     <button type="submit" name="loginButton">Log In</button>
     <br>
